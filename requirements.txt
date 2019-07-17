@@ -1,0 +1,7 @@
+Flask==1.0.2
+Flask-Uploads==0.2.1
+gunicorn==19.9.0
+numpy==1.16.2
+pandas==0.24.2
+Werkzeug==0.15.4
+urllib3==1.24.1
