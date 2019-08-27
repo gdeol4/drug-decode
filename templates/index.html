@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Usual Head things -->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Drug Decode</title>
+	<link rel="stylesheet" href="../static/css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Literata&display=swap" rel="stylesheet">
+	<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css"> -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+
+<body class="body-back">
+	<section class="section hero is-fullheight">
+		<div class="title-padding">
+			<span>
+				<h1 class="main-title is-1" style="font-family: 'Literata'; font-size: 6.5em;">Drug Decode</h1>
+			</span>
+		</div>
+
+		<div class="columns is-multiline is-centered">
+			<div class="column is-narrow notification is-link">
+				<p class="title">Example Upload</p>
+				<p class="subtitle">file format</p>
+				<div>
+					<table class="table is-narrow is-bordered">
+
+						<thead>
+							<tr>
+								<td>tylenol</td>
+							</tr>
+						</thead>
+						<tr>
+							<td>ampicillin</td>
+							<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+						</tr>
+						<tr>
+							<td>chloroform</td>
+							<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+						</tr>
+						<tr>
+							<td>halothan</td>
+							<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="column table-center notification is-narrow is-link">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</div>
+			<div class="column table-center notification is-narrow is-link">
+				<p class="title">Example Output</p>
+				<p class="subtitle">file format</p>
+				<table class="table is-narrow is-bordered">
+
+					<thead>
+						<tr>
+							<th> &nbsp;</th>
+							<th>Names</th>
+							<th>SMILES</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>0</th>
+							<td>tylenol</td>
+							<td>CC(=O)Nc1ccc(O)cc1</td>
+						</tr>
+						<tr>
+							<th>1</th>
+							<td>ampicillin</td>
+							<td>CC1(C)S[C@@H]...1C(O)=O</td>
+						</tr>
+						<tr>
+							<th>2</th>
+							<td>chloroform</td>
+							<td>ClC(Cl)Cl</td>
+						</tr>
+						<tr>
+							<th>3</th>
+							<td>halothan</td>
+							<td>FC(F)(F)C(Cl)Br</td>
+						</tr>
+				</table>
+			</div>
+		</div>
+
+		<div class="columns is-multiline is-centered">
+		<div class="column is-7">
+			<div class="tile is-parent is-vertical">
+				<article class="tile is-child notification is-link">
+					<p class="title is-5 blurb-pad-bottom tile-pad">This app converts common drug IDs to their SMILES string counterparts. Upload a .csv file with a single column containing drug names or CAS registry numbers. </p>
+					<form action="/upload" method="POST" enctype="multipart/form-data">
+						<!-- File upload field begins here -->
+						<div class="field">
+							<div class="file is-warning is-large">
+								<label class="file-label">
+									<input class="file-input is-large is-white" type="file" name="inputFile">
+									<span class="file-cta">
+										<span class="file-icon">
+											<i class="fas fa-folder-open"></i>
+										</span>
+										<span class="fil
+					e-label">
+											Choose file
+										</span>
+									</span>
+								</label>
+							</div>
+						</div>
+						<!-- File upload field ENDS here -->
+
+						<!-- File Submit field begins here -->
+						<div class="field">
+							<div class="file is-warning is-large">
+								<label class="file-label">
+									<input class="file-input is-large is-white" type="submit" name="inputFile">
+									<span class="file-cta">
+										<span class="file-icon">
+											<i class="fas fa-upload"></i>
+										</span>
+										<span class="file-label">
+											Submit file
+										</span>
+									</span>
+								</label>
+							</div>
+						</div>
+					</form>
+				</article>
+			</div>
+		</div>
+		</div>
+	</section>
+
+</body>
+
+</html>
